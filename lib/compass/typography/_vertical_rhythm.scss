@@ -217,3 +217,23 @@ $base-half-leader: $base-leader / 2;
 @mixin h-borders($width: 1px, $lines: 1, $font-size: $base-font-size, $border-style: $default-rhythm-border-style) {
   @include horizontal-borders($width, $lines, $font-size, $border-style);
 }
+
+// Shorthand mixin to apply whitespace for top and bottom padding.
+@mixin rhythm-padding(
+  $padding-leader: 1,
+  $padding-trailer: $padding-leader,
+  $font-size: $base-font-size
+) {
+  @include padding-leader($padding-leader, $font-size);
+  @include padding-trailer($padding-trailer, $font-size);
+}
+
+// Shorthand mixin to apply whitespace for top and bottom margins.
+@mixin rhythm-margins(
+  $leader: 1,
+  $trailer: $leader,
+  $font-size: $base-font-size
+) {
+  @include leader($leader, $font-size);
+  @include trailer($trailer, $font-size);
+}
