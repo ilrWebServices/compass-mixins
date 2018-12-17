@@ -167,7 +167,7 @@ $base-half-leader: $base-leader / 2;
 }
 
 // Shorthand mixin to apply whitespace for top and bottom margins and padding.
-@mixin rhythm($leader: 0, $padding-leader: 0, $padding-trailer: 0, $trailer: 0, $font-size: $base-font-size) {
+@mixin rhythm($leader: 0, $padding-leader: 0, $padding-trailer: 0, $trailer: $leader, $font-size: $base-font-size) {
   @include leader($leader, $font-size);
   @include padding-leader($padding-leader, $font-size);
   @include padding-trailer($padding-trailer, $font-size);
